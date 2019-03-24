@@ -79,16 +79,16 @@ app.get('/articles', function(req, res) {
 });
 
 // Route for grabbing a specific Article by id, populate it with it's note
-// app.get("/articles/:id", function(req, res) {
-//   db.Article.findOne({_id: req.params.id})
-//     .populate("note")
-//     .then(function(dbArticle){
-//       res.json(dbArticle)
-//     })
-//     .catch(function(err){
-//       res.json(err);
-//     });
-// });
+app.get("/articles/:id", function(req, res) {
+  db.Article.findOne({_id: req.params.id})
+    .populate("comment")
+    .then(function(dbArticle){
+      res.json(dbArticle)
+    })
+    .catch(function(err){
+      res.json(err);
+    });
+});
 
 //   // First, we grab the body of the html with axios
 //   axios.get("http://www.echojs.com/").then(function(response) {
