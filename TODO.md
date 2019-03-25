@@ -17,13 +17,13 @@ The app should:
   [x] - Summary
   [x] - URL
   [x] - optional photos
-[] - Users should be able to leave comments.  These will be saved to the db and associated with their articles
-[] - Users should be able to delete comments
+[] - Users should be able to leave comments. Modal??. These will be saved to the db and associated with their articles
+[] - Users should be able to delete comments. Button besides the comment
 [] - All comments are visible to every user
-[] - Should not save duplicate entries
+[] - Should not save duplicate entries.  Needs to be fixed.  Github Issue
 
 [] - CSS it
 
 [] - Deploy to Heroku
 
-[] - Create a README
+[] - Complete README
