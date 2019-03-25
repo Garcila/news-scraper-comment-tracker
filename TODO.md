@@ -11,16 +11,18 @@ Set mLab provision
       ```
 
 The app should:
-[] - Scrape stories from a new outlet when visited and stories saved to db
-[] - Should scrape and save:
-  [] - Headline
-  [] - Summary
-  [] - URL
-  [] - optional photos and more
+[x] - Scrape stories from a new outlet when visited and stories saved to db
+[x] - Should scrape and save:
+  [x] - Headline
+  [x] - Summary
+  [x] - URL
+  [x] - optional photos
 [] - Users should be able to leave comments.  These will be saved to the db and associated with their articles
 [] - Users should be able to delete comments
 [] - All comments are visible to every user
 [] - Should not save duplicate entries
+
+[] - CSS it
 
 [] - Deploy to Heroku
 

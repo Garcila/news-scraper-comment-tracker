@@ -81,7 +81,7 @@ app.get('/articles', function(req, res) {
 // Route for grabbing a specific Article by id, populate it with it's note
 app.get("/articles/:id", function(req, res) {
   db.Article.findOne({_id: req.params.id})
-    .populate("comment")
+    .populate("comments")
     .then(function(dbArticle){
       res.json(dbArticle)
     })
@@ -89,7 +89,6 @@ app.get("/articles/:id", function(req, res) {
       res.json(err);
     });
 });
-
 
 // Route for saving/updating an Article's associated Comment
 app.post("/articles/:id", function(req, res) {
