@@ -10,34 +10,19 @@ $(document).ready(function() {
             <h2 href='${article.link}'>${article.title}</h2>
             <p>${article.summary}</p>
 
-            
-
-            <div class="modal closed" id="modal">
-            <button class="close-button" id="close-button">
-              X
-            </button>
-            <div class="modal-guts">
-              <h1>Modal Example</h1>
-              <p>
-                Something Something
-              </p>
-              <p>
-                Something something
-              </p>
-            </div>
-          </div>
-    
-          <button id="open-button" class="open-button">Add Comment</button>
-
-
-
-
-
-
-
-
-
-
+              <div class="modal closed" id="modal">
+              <button class="close-button" id="close-button">
+                X
+              </button>
+              <div class="modal-guts">
+                <h2>Add a Comment to ${article.title}</h2>
+                <p>something something</p>
+                <p>
+                  Something something
+                </p>
+              </div>
+            </div>      
+            <button id="open-button" class="open-button">Add Comment</button>
 
             <div class="comments"></div>
           </div>
@@ -49,8 +34,8 @@ $(document).ready(function() {
 
   // Whenever someone clicks an article tag
   $(document).on('click', 'article', function() {
-    // Empty the notes from the note section
-    $('#comments').empty();
+    // Empty the all the comments on the page and display comments for this Article
+    $('.comments').empty();
     // Save the id from the article tag
     var thisId = $(this).attr('data-id');
 
