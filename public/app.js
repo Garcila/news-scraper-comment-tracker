@@ -9,6 +9,36 @@ $(document).ready(function() {
           <div class='card_info'>
             <h2 href='${article.link}'>${article.title}</h2>
             <p>${article.summary}</p>
+
+            
+
+            <div class="modal closed" id="modal">
+            <button class="close-button" id="close-button">
+              X
+            </button>
+            <div class="modal-guts">
+              <h1>Modal Example</h1>
+              <p>
+                Something Something
+              </p>
+              <p>
+                Something something
+              </p>
+            </div>
+          </div>
+    
+          <button id="open-button" class="open-button">Add Comment</button>
+
+
+
+
+
+
+
+
+
+
+
             <div class="comments"></div>
           </div>
           </article>
@@ -63,4 +93,23 @@ $(document).ready(function() {
         }
       });
   });
+
+  // $(document).on('click', '#open-button')
+
+  window.onload=function(){
+    var modal = document.querySelector( "#modal" );
+    var modalOverlay = document.querySelector( "#modal-overlay" );
+    var closeButton = document.querySelector( "#close-button" );
+    var openButton = document.querySelector( "#open-button" );
+
+    closeButton.addEventListener( "click", function () {
+      modal.classList.toggle( "closed" ); 
+      modalOverlay.classList.toggle( "closed" );
+    } );
+
+    openButton.addEventListener( "click", function () {
+      modal.classList.toggle( "closed" );
+      modalOverlay.classList.toggle( "closed" );
+    } );
+  };
 });
